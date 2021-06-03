@@ -1,0 +1,19 @@
+{
+  "name": "davidalleaume_3_25052021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidAlleaume/DavidAlleaume_3_25052021.git"
+  },
+  "author": "David Alleaume",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavidAlleaume/DavidAlleaume_3_25052021/issues"
+  },
+  "homepage": "https://github.com/DavidAlleaume/DavidAlleaume_3_25052021#readme"
+}
