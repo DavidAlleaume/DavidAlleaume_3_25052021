@@ -6,19 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ohmyfood</title>
   <link rel="stylesheet" type="text/css" href="/public/css/style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap"
+    rel="stylesheet">
   <script src="https://kit.fontawesome.com/172aad8cad.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <header class="header">
-    <a class="header__logo logo" href="acceuil.html">
-      <h1>ohmyfood</h1>
-    </a>
+  <header>
+    <div class="header">
+      <h1 class="header__logo">ohmyfood</h1>
+    </div>
   </header>
   <main>
     <section class="location">
-      <i class="fas fa-map-marker-alt"></i>
-      <h2>Paris, Belleville</h2>
+      <div class="location__container">
+        <div class="location__icon">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <div class="location__name">
+          <h2>Paris, Belleville</h2>
+        </div>
+      </div>
     </section>
     <section class="presentation">
       <div class="presentation__container">
@@ -110,7 +120,7 @@
     </section>
   </main>
   <footer class="footer">
-    <a class="footer__logo logo" href="acceuil.html">
+    <a class="footer__logo" href="acceuil.html">
       <h1>ohmyfood</h1>
     </a>
     <div class="footer__links_container">

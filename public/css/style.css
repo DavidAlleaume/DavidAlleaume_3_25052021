@@ -1,1 +1,56 @@
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+button, input, select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #f6f6f6;
+  font-family: "Roboto", arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25rem 0 0.5rem 0;
+}
+.header__logo {
+  font-family: "Shrikhand", cursive;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  background-color: #e6e6e6;
+  height: 50px;
+  box-shadow: inset 5px 15px 5px -13px #c9c5c5;
+}
+.location__container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 10.313rem;
+  margin: auto;
+}
+.location__icon {
+  font-size: 1rem;
+  padding-right: 1rem;
+  cursor: pointer;
+}
+.location__name {
+  font-size: 0.7rem;
+}
+
 /*# sourceMappingURL=style.css.map */
