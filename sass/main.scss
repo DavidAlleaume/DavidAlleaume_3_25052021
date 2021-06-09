@@ -1,17 +1,17 @@
 @import "./Base/resets";
 @import "./Utils/variables";
+@import "./Utils/mixins";
 
 html {
   font-size: 16px;
 }
 body {
-  background-color: #f6f6f6;
+  background-color: $main-background-color;
   font-family: "Roboto", arial, sans-serif;
+  min-width: 12.5rem;
 }
 .header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include block-centering;
   padding: 1.25rem 0 0.5rem 0;
     &__logo {
       font-family: "Shrikhand", cursive;
@@ -20,7 +20,7 @@ body {
 .location {
   display: flex;
   align-items: center;
-  background-color: #e6e6e6;
+  background-color: #ececec;
   height: 50px;
   box-shadow: inset 5px 15px 5px -13px rgb(201, 197, 197);
     &__container {
@@ -32,11 +32,155 @@ body {
     }
     &__icon {
      font-size: 1rem;
-     padding-right: 1rem;
+     padding-right: 0.7rem;
      cursor: pointer;
     }
     &__name {
-     font-size: 0.7rem;
+     font-size: 1.1rem;
+     font-weight: 700;
    }                                     
 }
+.presentation {
+  @include block-centering;
+  margin-bottom: 3.563rem;
+  &__heading {
+    width: 65%;
+    text-align: center;
+    font-weight: 900;
+    margin-top: 2.5rem;                                                      
+  }
+  &__txt {
+    width: 83%;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: rgb(99, 99, 99);
+    margin: 1.25rem 0 2.188rem 0; 
+  }
+  &__btn {
+    width: 58.13%;
+    max-width: 28rem;
+    height: 3.125rem;
+    background-color: $color-primary;
+    border: none;
+    border-radius: 3.125rem;
+    box-shadow: 1px 5px 15px rgb(221, 221, 221);
+    color: #FFFFFF;
+    font-size: 1rem;
+  }
+}
+.process {
+  background-color: #FFFFFF;
+  @include block-centering;
+  padding-bottom: 4.25rem;
+  &__heading {
+    font-weight: 900;
+    width: 90%;
+    margin: 3.125rem 0 2.188rem 0;
+  }
+  &__cards_container {
+    width: 90%;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  &__card {
+  position: relative;
+  display: block;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  text-decoration: none;
+  width: 96%;
+  height: 70px;
+  background-color: $main-background-color;
+  box-shadow: 1px 5px 15px rgb(221, 221, 221);
+  } 
+  &__number {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: -12.5px;
+    width: 25px;
+    height: 25px;
+    background-color: $color-primary;
+    border-radius: 50%;
+    color: #FFFFFF;
+  }
+  &__icon {
+    color: rgb(163, 163, 163);
+    padding-left: 2rem;
+    font-size: 1.2rem;
+  }
+  &__txt {
+    color: black;
+    padding-left: 1.5rem;
+    font-size: 1rem;
+  }
+}
+.process__txt--1 {
+  padding-left: 1.9rem;
+}
+.process__txt--3 {
+  padding-left: 1.2rem;
+}
+.restaurant {
+  @include block-centering;
+  padding-bottom: 4.25rem;
+  &__heading {
+    font-weight: 900;
+    width: 90%;
+    margin: 3.125rem 0 2.188rem 0;
+  }
+  &__cards_container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__card {
+    display: block;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    margin-bottom: 1.125rem;
+    box-shadow: 1px 5px 15px rgb(221, 221, 221);
+  }
+  &__img_box {
+    position: relative;
+    height: 174px;
+  }
+  &__new {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0.688rem;
+    right: 0.688rem;
+    width: 5rem;
+    height: 1.875rem;
+    background-color: $color-tertiary;
+    border-radius: 2px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #007558;
+  }
+  &__img {
+    height: 174px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    height: 77px;
+  }
+}
+
 

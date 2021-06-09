@@ -1,0 +1,5 @@
+@mixin block-centering {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
