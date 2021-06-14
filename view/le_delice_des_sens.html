@@ -6,150 +6,160 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ohmyfood</title>
   <link rel="stylesheet" type="text/css" href="/public/css/style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap"
+    rel="stylesheet">
   <script src="https://kit.fontawesome.com/172aad8cad.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <header>
-    <div class="header__txt">
-      <a class="header__arrow_back" href="acceuil.html">
-        <i class="fas fa-arrow-left"></i>
-      </a>
-      <h1 class="header__logo logo">ohmyfood</h1>
-    </div>
-    <div class="header__img">
-      <img src="/assets/le-delice-des-sens.jpg" alt="image d'un plat de cuisine gastronomique">
-    </div>
+  <header class="header header2">
+    <a href="acceuil.html">
+      <i class="fas fa-arrow-left"></i>
+    </a>
+    <h1 class="header__logo logo">ohmyfood</h1>
   </header>
-  <main class="menu">
-    <header class="menu__header">
-      <h2 class="menu__header__title">Le délice des sens</h2>
-      <div class="menu__header__heart heart">
-        <i class="fas fa-heart"></i>
-      </div>
-    </header>
-    <section class="courses">
-      <div class="courses__starters">
-        <h2 class="courses__title">Entrées</h2>
-        <div class="courses__card card1">
-          <div class="courses__text">
-            <h3 class="courses__name">Tartare de thon</h3>
-            <p class="courses__info">Assaisonné au yuzu</p>
-          </div>
-          <p class="courses__price">25€</p>
-          <div class="courses__validation">
-            <i class="fas fa-check-circle"></i>
+  <img class="cover" src="/assets/le-delice-des-sens.jpg" alt="image d'un plat de cuisine gastronomique">
+  <main>
+    <div class="menu">
+      <header class="menu__header">
+        <h2 class="menu__heading">Le délice des sens</h2>
+        <div class="menu__heart heart">
+          <i class="far fa-heart"></i>
+        </div>
+      </header>
+      <section class="courses">
+        <div class="courses__starters">
+          <h2 class="courses__heading">ENTRÉES</h2>
+          <div class="courses__cards_container">
+            <div class="courses__card card1">
+              <div class="courses__txt">
+                <h3 class="courses__name">Tartare de thon</h3>
+                <p class="courses__info">Assaisonné au yuzu</p>
+              </div>
+              <p class="courses__price">25€</p>
+              <div class="courses__validation">
+                <i class="fas fa-check-circle"></i>
+              </div>
+            </div>
+            <div class="courses__card card2">
+              <div class="courses__txt">
+                <h3 class="courses__name">Bouchée de homard croustillant</h3>
+                <p class="courses__info">Et sa farandole de petits légumes</p>
+              </div>
+              <p class="courses__price">35€</p>
+              <div class="courses__validation">
+                <i class="fas fa-check-circle"></i>
+              </div>
+            </div>
+            <div class="courses__card card3">
+              <div class="courses__txt">
+                <h3 class="courses__name">Velouté de cèpes</h3>
+                <p class="courses__info">Aux truffes</p>
+              </div>
+              <p class="courses__price">20€</p>
+              <div class="courses__validation">
+                <i class="fas fa-check-circle"></i>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="courses__card card2">
-          <div class="courses__text">
-            <h3 class="courses__name">Bouchée de homard croustillant</h3>
-            <p class="courses__info">Et sa farandole de petits légumes</p>
-          </div>
-          <p class="courses__price">35€</p>
-          <div class="courses__validation">
-            <i class="fas fa-check-circle"></i>
-          </div>
-        </div>
-        <div class="courses__card card3">
-          <div class="courses__text">
-            <h3 class="courses__name">Velouté de cèpes</h3>
-            <p class="courses__info">Aux truffes</p>
-          </div>
-          <p class="courses__price">20€</p>
-          <div class="courses__validation">
-            <i class="fas fa-check-circle"></i>
-          </div>
-        </div>
-      </div>
-      <div class="courses__main">
-        <h2 class="courses__title">Plats</h2>
-        <div class="courses__card card1">
-          <div class="courses__text">
-            <h3 class="courses__name">Poulet rôti aux herbes de Provence</h3>
-            <p class="courses__info">Et sa crème de truffe</p>
-          </div>
-          <p class="courses__price">40€</p>
-          <div class="courses__validation">
-            <i class="fas fa-check-circle"></i>
-          </div>
-        </div>
-        <div class="courses__card card2">
-          <div class="courses__text">
-            <h3 class="courses__name">Langouste rôtie</h3>
-            <p class="courses__info">Et ses légumes de saison</p>
-          </div>
-          <p class="courses__price">35€</p>
-          <div class="courses__validation">
-            <i class="fas fa-check-circle"></i>
+        <div class="courses__main">
+          <h2 class="courses__heading">PLATS</h2>
+          <div class="courses__cards_container">
+            <div class="courses__card card1">
+              <div class="courses__txt">
+                <h3 class="courses__name">Poulet rôti aux herbes de Provence</h3>
+                <p class="courses__info">Et sa crème de truffe</p>
+              </div>
+              <p class="courses__price">40€</p>
+              <div class="courses__validation">
+                <i class="fas fa-check-circle"></i>
+              </div>
+            </div>
+            <div class="courses__card card2">
+              <div class="courses__txt">
+                <h3 class="courses__name">Langouste rôtie</h3>
+                <p class="courses__info">Et ses légumes de saison</p>
+              </div>
+              <p class="courses__price">35€</p>
+              <div class="courses__validation">
+                <i class="fas fa-check-circle"></i>
+              </div>
+            </div>
+            <div class="courses__card card3">
+              <div class="courses__txt">
+                <h3 class="courses__name">Côte de boeuf Angus</h3>
+                <p class="courses__info">Et sa purée de panais</p>
+              </div>
+              <p class="courses__price">44€</p>
+              <div class="courses__validation">
+                <i class="fas fa-check-circle"></i>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="courses__card card3">
-          <div class="courses__text">
-            <h3 class="courses__name">Côte de boeuf Angus</h3>
-            <p class="courses__info">Et sa purée de panais</p>
-          </div>
-          <p class="courses__price">44€</p>
-          <div class="courses__validation">
-            <i class="fas fa-check-circle"></i>
-          </div>
-        </div>
-      </div>
-      <div class="courses__desserts">
-        <h2 class="courses__title">Desserts</h2>
-        <div class="courses__card card1">
-          <div class="courses__text">
-            <h3 class="courses__name">Farandole de desserts</h3>
-            <p class="courses__info">Du chef</p>
-          </div>
-          <p class="courses__price">18€</p>
-          <div class="courses__validation">
-            <i class="fas fa-check-circle"></i>
-          </div>
-        </div>
-        <div class="courses__card card2">
-          <div class="courses__text">
-            <h3 class="courses__name">Crème brulée</h3>
-            <p class="courses__info">Revisitée</p>
-          </div>
-          <p class="courses__price">22€</p>
-          <div class="courses__validation">
-            <i class="fas fa-check-circle"></i>
-          </div>
-        </div>
-        <div class="courses__card card3">
-          <div class="courses__text">
-            <h3 class="courses__name">Tiramisu</h3>
-            <p class="courses__info">À la noisette</p>
-          </div>
-          <p class="courses__price">23€</p>
-          <div class="courses__validation">
-            <i class="fas fa-check-circle"></i>
+        <div class="courses__desserts">
+          <h2 class="courses__heading">DESSERTS</h2>
+          <div class="courses__cards_container">
+            <div class="courses__card card1">
+              <div class="courses__txt">
+                <h3 class="courses__name">Farandole de desserts</h3>
+                <p class="courses__info">Du chef</p>
+              </div>
+              <p class="courses__price">18€</p>
+              <div class="courses__validation">
+                <i class="fas fa-check-circle"></i>
+              </div>
+            </div>
+            <div class="courses__card card2">
+              <div class="courses__txt">
+                <h3 class="courses__name">Crème brulée</h3>
+                <p class="courses__info">Revisitée</p>
+              </div>
+              <p class="courses__price">22€</p>
+              <div class="courses__validation">
+                <i class="fas fa-check-circle"></i>
+              </div>
+            </div>
+            <div class="courses__card card3">
+              <div class="courses__txt">
+                <h3 class="courses__name">Tiramisu</h3>
+                <p class="courses__info">À la noisette</p>
+              </div>
+              <p class="courses__price">23€</p>
+              <div class="courses__validation">
+                <i class="fas fa-check-circle"></i>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <button class="btn order__btn">Commander</button>
+      </section>
+      <button class="btn order__btn">Commander</button>
+    </div>
   </main>
   <footer>
-    <a class="footer__logo logo" href="acceuil.html">
-      <h1>ohmyfood</h1>
-    </a>
-    <div class="footer__links_container">
-      <a class="footer__link--icon" href="">
-        <i class="fas fa-utensils"></i>
-        <h3 class="footer__txt">Proposer un restaurant</h3>>
+    <div class="footer">
+      <a class="footer__logo" href="./index.html">
+        <h1>ohmyfood</h1>
       </a>
-      <a class="footer__link--icon" href="">
-        <i class="fas fa-hands-helping"></i>
-        <h3 class="footer__txt">Devenir partenaire</h3>
-      </a>
-      <a class="footer__link" href="">
-        <h3 class="footer__txt">Mentions légales</h3>
-      </a>
-      <a class="footer__link" href="">
-        <h3 class="footer__txt">Contact</h3>
-      </a>
+      <div class="footer__links_container">
+        <a class="footer__link_box" href="">
+          <i class="fas fa-utensils utensils"></i>
+          <h3 class="footer__txt">Proposer un restaurant</h3>
+        </a>
+        <a class="footer__link_box" href="">
+          <i class="fas fa-hands-helping hands"></i>
+          <h3 class="footer__txt">Devenir partenaire</h3>
+        </a>
+        <a class="footer__link_box" href="">
+          <h3 class="footer__txt">Mentions légales</h3>
+        </a>
+        <a class="footer__link_box" href="">
+          <h3 class="footer__txt">Contact</h3>
+        </a>
+      </div>
     </div>
   </footer>
 </body>

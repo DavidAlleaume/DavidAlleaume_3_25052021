@@ -15,7 +15,21 @@ body {
   padding: 1.25rem 0 0.5rem 0;
     &__logo {
       font-family: "Shrikhand", cursive;
+      font-size: 2rem;
+      font-weight: 550;
     }  
+}
+.header2 {
+  position: relative;
+  flex-direction: row;
+  justify-content: center;
+  .fas {
+  position: absolute;
+  top: 30px;
+  left: 1.438rem;
+  color: black;
+  font-size: 1.4rem;
+  }
 }
 .location {
   display: flex;
@@ -60,14 +74,7 @@ body {
   &__btn {
     width: 58.13%;
     max-width: 28rem;
-    height: 3.125rem;
-    background-image: linear-gradient(-10deg, $color-primary, $color-secondary);
-    border: none;
-    border-radius: 3.125rem;
-    box-shadow: 0 5px 15px rgb(206, 206, 206);
-    color: #FFFFFF;
-    font-size: 1rem;
-    cursor: pointer;
+    @include main-btn-style;
   }
 }
 .process {
@@ -207,6 +214,7 @@ footer {
   }
   &__logo h1 {
     font-family: "Shrikhand", cursive;
+    font-weight: 500;
     font-size: 1.25rem;
     color: #FFFFFF;
     margin-bottom: 1.25rem;
@@ -237,6 +245,80 @@ footer {
     font-weight: 400;
   }
 }
-
+.cover {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-height: 300px;
+  object-fit: cover;
+}
+.menu {
+  position: relative;
+  z-index: 100;
+  background-color: $main-background-color;
+  border-radius: 40px 40px 0 0px;
+  bottom: 50px;
+  padding-top: 1.875rem;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 90%;
+  }
+  &__heading {
+    font-family: "Shrikhand", cursive;
+    font-weight: 550;
+    font-size: 1.8rem;
+    margin-left: 18px;
+  }
+  &__heart {
+    font-size: 1.7rem;
+  }
+}
+.courses {
+  padding-top: 35px;
+  display: flex;
+  flex-direction: column;
+  &__heading {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-left: 18px;
+  }
+  &__cards_container {
+    width: 93.5%;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 45px;
+  }
+  &__card {
+    display: flex;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    margin-bottom: 14px;
+    padding-left: 12px;
+    box-shadow: 1px 5px 15px rgb(221, 221, 221);
+  }
+  &__txt {
+    width: 75%;
+    margin: 12px 0 10px 0;
+    white-space: nowrap;
+    
+  }
+  &__name {
+    font-size: 1.1rem;
+    @include txt-behaviour;
+    margin-bottom: 5px;
+  }
+  &__info {
+    font-size: 0.9rem;
+    @include txt-behaviour;
+  }
+}
+.order__btn {
+  width: 50%;
+  @include main-btn-style;
+  display: block;
+  margin: auto;
+}
 
 
