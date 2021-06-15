@@ -1,7 +1,14 @@
-@mixin block-centering {
+@mixin main-headings {
+    font-family: "Shrikhand", cursive;
+}
+@mixin flex-direction-centering {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+@mixin flex-and-direction {
+    display: flex;
+    flex-direction: column;
 }
 @mixin txt-behaviour {
     text-overflow: ellipsis;
@@ -12,8 +19,11 @@
     background-image: linear-gradient(-10deg, $color-primary, $color-secondary);
     border: none;
     border-radius: 3.125rem;
-    box-shadow: 0 5px 15px rgb(206, 206, 206);
+    @include shadow;
     color: #FFFFFF;
     font-size: 1rem;
     cursor: pointer;
+}
+@mixin shadow {
+    box-shadow: 1px 5px 15px rgb(221, 221, 221);
 }
