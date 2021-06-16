@@ -8,7 +8,7 @@ html {
 body {
   background-color: $main-background-color;
   font-family: "Roboto", arial, sans-serif;
-  min-width: 12.5rem;
+  min-width: 18.125rem;
 }
 .header {
   @include flex-direction-centering;
@@ -78,6 +78,9 @@ body {
     width: 58.13%;
     max-width: 28rem;
     @include main-btn-style;
+    &:hover {
+      @include main-btn-hover;
+    }
   }
 }
 .process {
@@ -298,6 +301,7 @@ footer {
     border-radius: 15px;
     margin-bottom: 14px;
     padding-left: 12px;
+    cursor: pointer;
     @include shadow;
   }
   &__txt {
@@ -315,12 +319,34 @@ footer {
     font-size: 0.9rem;
     @include txt-behaviour;
   }
+  &__price {
+    @include flex-direction-centering;
+    justify-content: flex-end;
+    width: 24.28%;
+    font-weight: 700;
+    margin-bottom: 10px
+  }
+  &__validation {
+    @include flex-direction-centering;
+    justify-content: center;
+    background-color: $color-tertiary;
+    border-radius: 0 15px 15px 0;
+    width: 60px;
+  }
+  .fas {
+    background-color: transparent;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+  }
 }
 .order__btn {
   width: 50%;
   @include main-btn-style;
   display: block;
   margin: auto;
+  &:hover {
+    @include main-btn-hover;
+  }
 }
 
 
