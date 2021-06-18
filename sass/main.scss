@@ -8,7 +8,7 @@ html {
 body {
   background-color: $main-background-color;
   font-family: "Roboto", arial, sans-serif;
-  min-width: 18.125rem;
+  min-width: 375px;
 }
 .header {
   @include flex-direction-centering;
@@ -79,9 +79,14 @@ body {
     max-width: 28rem;
     @include main-btn-style;
     &:hover {
-      @include main-btn-hover;
+      &::after {
+        opacity: 1;
     }
   }
+  &::after {
+    @include main-btn-after;
+  }
+}
 }
 .process {
   background-color: #FFFFFF;
@@ -184,6 +189,7 @@ body {
   &__img {
     height: 174px;
     width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: 0px -55px;
     border-radius: 15px 15px 0 0;
@@ -206,10 +212,36 @@ body {
     font-weight: 400;
     margin-top: 3px;
   }
-  &__heart .far {
-    margin: 1.438rem 1.438rem 0 0;
+  &__heart {
+    border: 1px solid red;
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    align-self: flex-start;
+    margin: 20px 23px 0 0;
+    z-index: 0;
+    overflow: hidden;
+  }
+  &__heart::before {
+    content: "";
+    position: absolute;
+    top: 28px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $main-btn-color;
+    border-radius: 10px 10px 0 0;
+    transition: all 2s;
+    z-index: -1;
+  }
+  &__heart:hover::before {
+    top: 0;
+  }
+  .fa-heart {
     font-size: 1.5rem;
     color: rgb(66, 66, 66);
+    background: transparent;
+    overflow: hidden;
   }
 }
 footer {
@@ -345,8 +377,12 @@ footer {
   display: block;
   margin: auto;
   &:hover {
-    @include main-btn-hover;
+      &::after {
+        opacity: 1;
+    }
+  }
+  &::after {
+    @include main-btn-after;
   }
 }
-
 

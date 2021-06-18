@@ -15,6 +15,8 @@
     overflow: hidden;
 }
 @mixin main-btn-style {
+    position: relative;
+    z-index: 1;
     height: 3.125rem;
     border: none;
     border-radius: 3.125rem;
@@ -23,11 +25,20 @@
     color: #FFFFFF;
     font-size: 1rem;
     cursor: pointer;
-    transition: all 0.4s;
 }
-@mixin main-btn-hover {
+@mixin main-btn-after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    z-index: -1;
+    border-radius: 3.125rem;
     background: linear-gradient(-5deg, $light-color-primary, $light-color-secondary);
     box-shadow: 0px 5px 10px 5px $shadow-color;
+    transition: all 0.5s;
 }
 @mixin shadow($color: $shadow-color){
     box-shadow: 0px 5px 10px 0px $shadow-color;

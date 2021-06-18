@@ -18,7 +18,7 @@ html {
 body {
   background-color: #f3f3f3;
   font-family: "Roboto", arial, sans-serif;
-  min-width: 18.125rem;
+  min-width: 375px;
 }
 
 .header {
@@ -96,6 +96,8 @@ body {
 .presentation__btn {
   width: 58.13%;
   max-width: 28rem;
+  position: relative;
+  z-index: 1;
   height: 3.125rem;
   border: none;
   border-radius: 3.125rem;
@@ -104,11 +106,23 @@ body {
   color: #FFFFFF;
   font-size: 1rem;
   cursor: pointer;
-  transition: all 0.4s;
 }
-.presentation__btn:hover {
+.presentation__btn:hover::after {
+  opacity: 1;
+}
+.presentation__btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  border-radius: 3.125rem;
   background: linear-gradient(-5deg, #a16be0, #ff93e1);
   box-shadow: 0px 5px 10px 5px #c7c7c7;
+  transition: all 0.5s;
 }
 
 .process {
@@ -224,6 +238,7 @@ body {
 .restaurant__img {
   height: 174px;
   width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: 0px -55px;
   border-radius: 15px 15px 0 0;
@@ -247,10 +262,36 @@ body {
   font-weight: 400;
   margin-top: 3px;
 }
-.restaurant__heart .far {
-  margin: 1.438rem 1.438rem 0 0;
+.restaurant__heart {
+  border: 1px solid red;
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+  align-self: flex-start;
+  margin: 20px 23px 0 0;
+  z-index: 0;
+  overflow: hidden;
+}
+.restaurant__heart::before {
+  content: "";
+  position: absolute;
+  top: 28px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-5deg, #9356DC, #FF79DA);
+  border-radius: 10px 10px 0 0;
+  transition: all 2s;
+  z-index: -1;
+}
+.restaurant__heart:hover::before {
+  top: 0;
+}
+.restaurant .fa-heart {
   font-size: 1.5rem;
   color: #424242;
+  background: transparent;
+  overflow: hidden;
 }
 
 footer {
@@ -392,6 +433,8 @@ footer {
 
 .order__btn {
   width: 50%;
+  position: relative;
+  z-index: 1;
   height: 3.125rem;
   border: none;
   border-radius: 3.125rem;
@@ -400,13 +443,25 @@ footer {
   color: #FFFFFF;
   font-size: 1rem;
   cursor: pointer;
-  transition: all 0.4s;
   display: block;
   margin: auto;
 }
-.order__btn:hover {
+.order__btn:hover::after {
+  opacity: 1;
+}
+.order__btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  border-radius: 3.125rem;
   background: linear-gradient(-5deg, #a16be0, #ff93e1);
   box-shadow: 0px 5px 10px 5px #c7c7c7;
+  transition: all 0.5s;
 }
 
 /*# sourceMappingURL=style.css.map */
