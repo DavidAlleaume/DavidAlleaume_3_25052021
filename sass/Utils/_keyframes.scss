@@ -1,0 +1,27 @@
+@keyframes slide-left {
+    0% {
+      transform: translateX(0);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(-60px);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-price {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-60px);
+      }
+    }
+    @keyframes rotate-center {
+      0% {
+      transform: rotate(0);
+      }
+      100% {
+       transform: rotate(360deg);
+      }
+    }
+  

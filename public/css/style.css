@@ -11,6 +11,32 @@ html {
   box-sizing: border-box;
 }
 
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-60px);
+    opacity: 1;
+  }
+}
+@keyframes slide-price {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-60px);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 html {
   font-size: 16px;
 }
@@ -18,7 +44,7 @@ html {
 body {
   background-color: #f3f3f3;
   font-family: "Roboto", arial, sans-serif;
-  min-width: 375px;
+  min-width: 200px;
 }
 
 .header {
@@ -377,46 +403,70 @@ footer {
   margin-left: 18px;
 }
 .courses__cards_container {
-  width: 93.5%;
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 15px;
   margin-bottom: 45px;
 }
 .courses__card {
+  position: relative;
+  overflow: hidden;
   display: flex;
+  justify-content: space-between;
+  height: 68px;
+  width: 93.3%;
   background-color: #FFFFFF;
   border-radius: 15px;
   margin-bottom: 14px;
-  padding-left: 12px;
   cursor: pointer;
   box-shadow: 0px 5px 10px 0px #c7c7c7;
 }
+.courses__card:hover .validation {
+  animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.courses__card:hover .price {
+  animation: slide-price 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.courses__card:hover .fas {
+  animation: rotate-center 1s ease-in-out both;
+}
 .courses__txt {
   width: 75%;
-  margin: 12px 0 10px 0;
-  white-space: nowrap;
-}
-.courses__name {
-  font-size: 1.1rem;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  margin-bottom: 5px;
-}
-.courses__info {
-  font-size: 0.9rem;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.courses__price {
+  border: 1px solid blue;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-  width: 24.28%;
+  padding: 12px 0 0 15px;
+}
+.courses__name {
+  border: 1px solid purple;
+  width: 100%;
+  font-size: 1.1rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 5px;
+}
+.courses__info {
+  width: 100%;
+  font-size: 0.9rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.courses__price {
+  background-color: pink;
+  display: flex;
+  align-items: flex-end;
   font-weight: 700;
-  margin-bottom: 10px;
+  padding-bottom: 12px;
+  margin-right: 20px;
+  margin-left: 26px;
 }
 .courses__validation {
+  position: absolute;
+  right: -60px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -424,11 +474,12 @@ footer {
   background-color: #99E2D0;
   border-radius: 0 15px 15px 0;
   width: 60px;
+  height: 100%;
 }
 .courses .fas {
   background-color: transparent;
   color: #FFFFFF;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .order__btn {

@@ -1,6 +1,8 @@
 @import "./Base/resets";
 @import "./Utils/variables";
 @import "./Utils/mixins";
+@import "./Utils/keyframes";
+
 
 html {
   font-size: 16px;
@@ -8,7 +10,7 @@ html {
 body {
   background-color: $main-background-color;
   font-family: "Roboto", arial, sans-serif;
-  min-width: 375px;
+  min-width: 200px;
 }
 .header {
   @include flex-direction-centering;
@@ -322,53 +324,76 @@ footer {
     margin-left: 18px;
   }
   &__cards_container {
-    width: 93.5%;
-    margin: auto;
+    @include flex-direction-centering;
     margin-top: 15px;
     margin-bottom: 45px;
   }
   &__card {
+    position: relative;
+    overflow: hidden;
     display: flex;
+    justify-content: space-between;
+    height: 68px;
+    width: 93.3%;
     background-color: #FFFFFF;
     border-radius: 15px;
     margin-bottom: 14px;
-    padding-left: 12px;
     cursor: pointer;
     @include shadow;
+    &:hover {
+      .validation {
+        animation: slide-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+      }
+      .price {
+        animation: slide-price 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+      }
+      .fas {
+        animation: rotate-center 1s ease-in-out both;
+      }
+    }
   }
   &__txt {
     width: 75%;
-    margin: 12px 0 10px 0;
-    white-space: nowrap;
-    
+    border: 1px solid blue;
+    @include flex-direction-centering;
+    padding: 12px 0 0 15px;
   }
   &__name {
+    border: 1px solid purple;
+    width: 100%;
     font-size: 1.1rem;
     @include txt-behaviour;
     margin-bottom: 5px;
+    
   }
   &__info {
+    width: 100%;
     font-size: 0.9rem;
     @include txt-behaviour;
   }
   &__price {
-    @include flex-direction-centering;
-    justify-content: flex-end;
-    width: 24.28%;
+    background-color: pink;
+    display: flex;
+    align-items: flex-end;
     font-weight: 700;
-    margin-bottom: 10px
+    padding-bottom: 12px;
+    margin-right: 20px;
+    margin-left: 26px;
   }
   &__validation {
+    position: absolute;
+    right: -60px;
     @include flex-direction-centering;
     justify-content: center;
     background-color: $color-tertiary;
     border-radius: 0 15px 15px 0;
     width: 60px;
+    height: 100%;
   }
   .fas {
     background-color: transparent;
     color: #FFFFFF;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }
 .order__btn {
