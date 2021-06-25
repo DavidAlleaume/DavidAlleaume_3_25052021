@@ -400,7 +400,13 @@ footer {
 .courses__heading {
   font-size: 1rem;
   font-weight: 400;
-  margin-left: 18px;
+  margin-left: 19px;
+}
+.courses__heading_underline {
+  width: 40px;
+  height: 3px;
+  background-color: #99E2D0;
+  margin: 5px 0 0 18px;
 }
 .courses__cards_container {
   display: flex;
@@ -422,25 +428,23 @@ footer {
   cursor: pointer;
   box-shadow: 0px 5px 10px 0px #c7c7c7;
 }
-.courses__card:hover .validation {
-  animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
 .courses__card:hover .price {
   animation: slide-price 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.courses__card:hover .validation {
+  animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 .courses__card:hover .fas {
   animation: rotate-center 1s ease-in-out both;
 }
 .courses__txt {
   width: 75%;
-  border: 1px solid blue;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 12px 0 0 15px;
 }
 .courses__name {
-  border: 1px solid purple;
   width: 100%;
   font-size: 1.1rem;
   text-overflow: ellipsis;
@@ -456,7 +460,6 @@ footer {
   white-space: nowrap;
 }
 .courses__price {
-  background-color: pink;
   display: flex;
   align-items: flex-end;
   font-weight: 700;

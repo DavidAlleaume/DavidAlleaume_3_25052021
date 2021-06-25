@@ -321,7 +321,13 @@ footer {
   &__heading {
     font-size: 1rem;
     font-weight: 400;
-    margin-left: 18px;
+    margin-left: 19px;
+  }
+  &__heading_underline {
+    width: 40px;
+    height: 3px;
+    background-color: $color-tertiary;
+    margin: 5px 0 0 18px;
   }
   &__cards_container {
     @include flex-direction-centering;
@@ -341,11 +347,11 @@ footer {
     cursor: pointer;
     @include shadow;
     &:hover {
-      .validation {
-        animation: slide-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-      }
       .price {
         animation: slide-price 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+      }
+      .validation {
+        animation: slide-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
       }
       .fas {
         animation: rotate-center 1s ease-in-out both;
@@ -354,12 +360,10 @@ footer {
   }
   &__txt {
     width: 75%;
-    border: 1px solid blue;
     @include flex-direction-centering;
     padding: 12px 0 0 15px;
   }
   &__name {
-    border: 1px solid purple;
     width: 100%;
     font-size: 1.1rem;
     @include txt-behaviour;
@@ -372,7 +376,6 @@ footer {
     @include txt-behaviour;
   }
   &__price {
-    background-color: pink;
     display: flex;
     align-items: flex-end;
     font-weight: 700;
