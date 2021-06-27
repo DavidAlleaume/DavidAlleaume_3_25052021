@@ -24,7 +24,7 @@ body {
   bottom: 0;
   right: 0;
   z-index: 100;
-  animation: loading-page-opacity 2s linear both;
+  animation: loading-page-opacity 2.5s ease-in-out both;
   &__spinner {
     position: relative;
     width: 4rem;
