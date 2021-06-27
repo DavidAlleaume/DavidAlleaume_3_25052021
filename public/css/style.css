@@ -133,8 +133,8 @@ body {
 }
 .header__logo {
   font-family: "Shrikhand", cursive;
-  font-size: 2rem;
-  font-weight: 550;
+  font-size: 1.8rem;
+  font-weight: 500;
 }
 
 .header2 {
@@ -166,12 +166,12 @@ body {
 }
 .location__icon {
   font-size: 1rem;
-  padding-right: 0.7rem;
+  padding: 0 0.8rem 0 0.3rem;
   cursor: pointer;
   color: #3f3f3f;
 }
 .location__name {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 700;
   color: #3f3f3f;
 }
@@ -462,7 +462,7 @@ footer {
 }
 .menu__heading {
   font-family: "Shrikhand", cursive;
-  font-weight: 550;
+  font-weight: 500;
   font-size: 1.8rem;
   margin-left: 18px;
 }

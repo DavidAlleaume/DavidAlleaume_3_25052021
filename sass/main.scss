@@ -66,8 +66,8 @@ body {
   padding: 1.25rem 0 0.5rem 0;
     &__logo {
       @include main-headings;
-      font-size: 2rem;
-      font-weight: 550;
+      font-size: 1.8rem;
+      font-weight: 500;
     }  
 }
 .header2 {
@@ -97,12 +97,12 @@ body {
     }
     &__icon {
      font-size: 1rem;
-     padding-right: 0.7rem;
+     padding: 0 0.8rem 0 0.3rem;
      cursor: pointer;
      color:rgb(63, 63, 63);
     }
     &__name {
-     font-size: 1.1rem;
+     font-size: 1rem;
      font-weight: 700;
      color:rgb(63, 63, 63);
    }                                     
@@ -356,7 +356,7 @@ footer {
   }
   &__heading {
     @include main-headings;
-    font-weight: 550;
+    font-weight: 500;
     font-size: 1.8rem;
     margin-left: 18px;
   }
