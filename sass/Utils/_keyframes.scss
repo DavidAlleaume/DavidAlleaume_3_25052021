@@ -52,6 +52,28 @@
     opacity: 0;
   }
 }
+@keyframes heart-animationbis {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  40% {
+    stroke-dashoffset: 1500;
+    fill: #ffb7eb;
+    opacity: 0.5;
+  }
+  80% {
+    stroke: #9356DC;
+    stroke-dashoffset: 0;
+    fill: url(#grad1);
+    opacity: 0.8;
+  }
+  100% {
+    stroke: none;
+    fill: url(#grad1);
+    opacity: 1;
+  }
+}
+ 
 
   
   

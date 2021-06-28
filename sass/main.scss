@@ -264,35 +264,19 @@ body {
     margin-top: 3px;
   }
   &__heart {
-    border: 1px solid red;
-    position: relative;
+    width: 25px;
     cursor: pointer;
-    padding: 0;
-    align-self: flex-start;
-    margin: 20px 23px 0 0;
-    z-index: 0;
-    overflow: hidden;
+    margin: 22px 23px 0 0;
   }
-  &__heart::before {
-    content: "";
-    position: absolute;
-    top: 28px;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: $main-btn-color;
-    border-radius: 10px 10px 0 0;
-    transition: all 2s;
-    z-index: -1;
-  }
-  &__heart:hover::before {
-    top: 0;
-  }
-  .fa-heart {
-    font-size: 1.5rem;
-    color: rgb(66, 66, 66);
-    background: transparent;
-    overflow: hidden;
+  &__heart path {
+    fill: transparent;
+    stroke-width: 25;
+    stroke: black;
+    stroke-dasharray: 1560;
+    stroke-dashoffset: 0;
+    &:hover {
+      animation: heart-animationbis 0.6s linear forwards;
+    }
   }
 }
 footer {
@@ -361,7 +345,18 @@ footer {
     margin-left: 18px;
   }
   &__heart {
-    font-size: 1.7rem;
+    width: 30px;
+    cursor: pointer;
+  }
+  &__heart path {
+    fill: transparent;
+    stroke-width: 25;
+    stroke: black;
+    stroke-dasharray: 1560;
+    stroke-dashoffset: 0;
+    &:hover {
+      animation: heart-animationbis 0.6s linear forwards;
+    }
   }
 }
 .courses {
@@ -404,7 +399,6 @@ footer {
       }
       .validation {
         transform: translateX(0);
-        opacity: 1;
       }
       .fas {
         transform: rotate(360deg)
@@ -443,7 +437,6 @@ footer {
     justify-content: center;
     background-color: $color-tertiary;
     border-radius: 0 15px 15px 0;
-    opacity: 0;
     transform: translateX(60px);
     transition: all 0.5s ease-in-out;
   }
@@ -451,7 +444,7 @@ footer {
     background-color: transparent;
     color: #FFFFFF;
     font-size: 1.3rem;
-    transform: rotate(0);
+    transform: rotate(0deg);
     transition: all 0.5s ease-in-out;
   }
 }
