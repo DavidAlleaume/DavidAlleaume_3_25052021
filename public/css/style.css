@@ -87,6 +87,16 @@ html {
     opacity: 1;
   }
 }
+@keyframes courses_cards_appearance {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 .loader {
   display: flex;
   justify-content: center;
@@ -273,7 +283,7 @@ body {
 .presentation__btn:hover::after {
   opacity: 1;
 }
-.presentation__btn::after {
+.presentation::after {
   content: "";
   position: absolute;
   top: 0;
@@ -343,12 +353,10 @@ body {
   font-weight: 700;
   font-size: 1rem;
 }
-
-.process__txt--1 {
+.process .process__txt--1 {
   padding-left: 1.9rem;
 }
-
-.process__txt--3 {
+.process .process__txt--3 {
   padding-left: 1.2rem;
 }
 
@@ -469,7 +477,7 @@ body {
   margin-left: 1.125rem;
 }
 .menu__heart {
-  width: 1.875rem;
+  width: 1.563rem;
   cursor: pointer;
 }
 .menu__heart .heart {
@@ -517,6 +525,7 @@ body {
   margin-bottom: 0.875rem;
   cursor: pointer;
   overflow: hidden;
+  animation: courses_cards_appearance 1s ease-in-out both;
   box-shadow: 0px 5px 10px 0px #c7c7c7;
 }
 .courses__card:hover .info {
@@ -530,6 +539,18 @@ body {
 }
 .courses__card:hover .fas {
   transform: rotate(360deg);
+}
+.courses .card1 {
+  animation-delay: 0.1s;
+}
+.courses .card2 {
+  animation-delay: 0.25s;
+}
+.courses .card3 {
+  animation-delay: 0.5s;
+}
+.courses .card4 {
+  animation-delay: 0.65s;
 }
 .courses__info {
   width: 76%;
