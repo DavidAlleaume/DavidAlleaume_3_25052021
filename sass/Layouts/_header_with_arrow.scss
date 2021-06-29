@@ -1,0 +1,12 @@
+.header_with_arrow {
+  position: relative;
+  flex-direction: row;
+  justify-content: center;
+  .fas {
+    position: absolute;
+    top: 30px;
+    left: 1.438rem;
+    color: black;
+    font-size: 1.4rem;
+  }
+}

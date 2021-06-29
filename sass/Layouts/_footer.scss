@@ -1,0 +1,40 @@
+footer {
+    background-color: #3a3a3a;
+    padding: 1.688rem 0 2.375rem 1.5rem;
+  }
+.footer {
+    &__logo {
+      text-decoration: none;
+    }
+    &__logo h1 {
+      @include main-headings;
+      font-weight: 500;
+      font-size: 1.25rem;
+      color: #FFFFFF;
+      margin-bottom: 1.25rem;
+    }
+    &__links_container {
+      @include flex-and-direction;
+    }
+    &__link_box {
+      display: block;
+      text-decoration: none;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.625rem;
+    }
+    &__link_box .utensils {
+      font-size: 0.8rem;
+      margin-right: 0.85rem;
+      padding-bottom: 2px;
+    }
+    &__link_box .hands {
+      font-size: 0.7rem;
+      margin-right: 0.65rem;
+    }
+    &__txt {
+      font-size: 1rem;
+      font-weight: 400;
+    }
+  }

@@ -2,92 +2,23 @@
 @import "./Utils/variables";
 @import "./Utils/mixins";
 @import "./Utils/keyframes";
+@import "./Pages/loading-spinner";
+@import "./Layouts/footer";
+@import "./Layouts/main_header";
+@import "./Layouts/header_with_arrow";
 
 
-html {
-  font-size: 16px;
-}
 body {
   background-color: $main-background-color;
   font-family: "Roboto", arial, sans-serif;
-  min-width: 300px;
-}
-.loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  background-color: #FFFFFF;
-  position: fixed;
-  top: 0; 
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 100;
-  animation: loading-page-opacity 2.5s ease-in-out both;
-  &__spinner {
-    position: relative;
-    width: 4rem;
-    height: 4rem;
-    border: 8px solid transparent;
-    border-top-color: $color-primary;
-    border-bottom-color: $color-primary;
-    border-radius: 50%;
-    margin-right: 1rem;
-    animation: spin-reverse 1.3s linear infinite;
-    &::after {
-      content: "";
-      position: absolute;
-      top: 6px; 
-      left: 6px;
-      bottom: 6px;
-      right: 6px;
-      border-radius: 50%;
-      border: 8px solid transparent;
-      border-top-color: $color-secondary;
-      border-bottom-color: $color-secondary;
-      -webkit-animation: spin 0.8s linear infinite;
-      animation: spin 1s linear infinite;
-    }
-    &::before {
-      content: "";
-      width: 2rem;
-      height: 2rem;
-      border-radius: 50%;
-      position: absolute;
-      top: 14px;
-      left: 14px;
-      background-color: $color-tertiary;
-    }
-  }
-}
-.header {
-  @include flex-direction-centering;
-  padding: 1.25rem 0 0.5rem 0;
-    &__logo {
-      @include main-headings;
-      font-size: 1.8rem;
-      font-weight: 500;
-    }  
-}
-.header2 {
-  position: relative;
-  flex-direction: row;
-  justify-content: center;
-  .fas {
-  position: absolute;
-  top: 30px;
-  left: 1.438rem;
-  color: black;
-  font-size: 1.4rem;
-  }
+  min-width: 18.75rem;
 }
 .location {
   display: flex;
   align-items: center;
   background-color: #ececec;
-  height: 50px;
-  box-shadow: inset 5px 15px 5px -13px rgb(201, 197, 197);
+  height: 3.125rem;
+  box-shadow: inset 0.313rem 0.938rem 0.313rem -0.813rem rgb(201, 197, 197);
     &__container {
       display: flex;
       justify-content: flex-start;
@@ -110,86 +41,86 @@ body {
 .presentation {
   @include flex-direction-centering;
   margin-bottom: 3.563rem;
-  &__heading {
-    width: 65%;
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 900;
-    margin-top: 2.5rem;                                                      
-  }
-  &__txt {
-    width: 83%;
-    text-align: center;
-    font-size: 1.1rem;
-    font-weight: 400;
-    color:rgb(63, 63, 63);
-    margin: 1rem 0 2.188rem 0; 
-  }
-  &__btn {
-    width: 58.13%;
-    max-width: 28rem;
-    @include main-btn-style;
-    &:hover {
-      &::after {
-        opacity: 1;
+    &__heading {
+      width: 65%;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 900;
+      margin-top: 2.5rem;                                                      
+    }
+    &__txt {
+      width: 83%;
+      text-align: center;
+      font-size: 1.1rem;
+      font-weight: 400;
+      color:rgb(63, 63, 63);
+      margin: 1rem 0 2.188rem 0; 
+    }
+    &__btn {
+      width: 58.13%;
+      max-width: 28rem;
+      @include main-btn-style;
+      &:hover {
+        &::after {
+          opacity: 1;
+      }
+    }
+    &::after {
+      @include main-btn-after;
     }
   }
-  &::after {
-    @include main-btn-after;
-  }
-}
 }
 .process {
   background-color: #FFFFFF;
   @include flex-direction-centering;
   padding-bottom: 4.25rem;
-  &__heading {
-    font-weight: 900;
-    width: 90%;
-    margin: 3.125rem 0 2.188rem 0;
-  }
-  &__cards_container {
-    width: 90%;
-    height: 270px;
-    @include flex-and-direction;
-    align-items: flex-end;
-    justify-content: space-between;
-  }
-  &__card {
-  position: relative;
-  display: block;
-  display: flex;
-  align-items: center;
-  border-radius: 20px;
-  text-decoration: none;
-  width: 96%;
-  height: 70px;
-  background-color: $main-background-color;
-  @include shadow;
-  } 
-  &__number {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    left: -12.5px;
-    width: 25px;
-    height: 25px;
-    background-color: $color-primary;
-    border-radius: 50%;
-    color: #FFFFFF;
-  }
-  &__icon {
-    color: rgb(121, 121, 121);
-    padding-left: 2rem;
-    font-size: 1.2rem;
-  }
-  &__txt {
-    color: black;
-    padding-left: 1.5rem;
-    font-weight: 700;
-    font-size: 1rem;
-  }
+    &__heading {
+      font-weight: 900;
+      width: 90%;
+      margin: 3.125rem 0 2.188rem 0;
+    }
+    &__cards_container {
+      width: 90%;
+      height: 16.875rem;
+      @include flex-and-direction;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+    &__card {
+      position: relative;
+      display: block;
+      display: flex;
+      align-items: center;
+      border-radius: 1.25rem;
+      text-decoration: none;
+      width: 96%;
+      height: 4.375rem;
+      background-color: $main-background-color;
+      @include shadow;
+    } 
+    &__number {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      left: -0.781rem;
+      width: 1.563rem;
+      height: 1.563rem;
+      background-color: $color-primary;
+      border-radius: 50%;
+      color: #FFFFFF;
+    }
+    &__icon {
+      color: rgb(121, 121, 121);
+      padding-left: 2rem;
+      font-size: 1.2rem;
+    }
+    &__txt {
+      color: black;
+      padding-left: 1.5rem;
+      font-weight: 700;
+      font-size: 1rem;
+    }
 }
 .process__txt--1 {
   padding-left: 1.9rem;
@@ -214,13 +145,13 @@ body {
     display: block;
     text-decoration: none;
     @include flex-and-direction;
-    border-radius: 20px;
+    border-radius: 1.25rem;
     margin-bottom: 1.125rem;
     @include shadow;
   }
   &__img_box {
     position: relative;
-    height: 174px;
+    height: 10.875rem;
   }
   &__new {
     position: absolute;
@@ -232,26 +163,26 @@ body {
     width: 5rem;
     height: 1.875rem;
     background-color: $color-tertiary;
-    border-radius: 2px;
+    border-radius: 0.125rem;
     font-size: 0.9rem;
     font-weight: 700;
     color: #007558;
   }
   &__img {
-    height: 174px;
+    height: 10.875rem;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 0px -55px;
-    border-radius: 15px 15px 0 0;
+    object-position: 0px -3.438rem;
+    border-radius: 0.938rem 0.938rem 0 0;
   }
   .img2 {
-    object-position: 0px -150px;
+    object-position: 0 -9.375rem;
   }
   &__info {
     display: flex;
     justify-content: space-between;
-    height: 77px;
+    height: 4.813rem;
   }
   &__txt {
     @include flex-and-direction;
@@ -261,12 +192,12 @@ body {
   }
   &__place {
     font-weight: 400;
-    margin-top: 3px;
+    margin-top: 0.188rem;
   }
   &__heart {
-    width: 25px;
+    width: 1.563rem;
     cursor: pointer;
-    margin: 22px 23px 0 0;
+    margin: 1.375rem 1.438rem 0 0;
   }
   &__heart path {
     fill: transparent;
@@ -279,57 +210,17 @@ body {
     }
   }
 }
-footer {
-  background-color: #3a3a3a;
-  padding: 1.688rem 0 2.375rem 1.5rem;
-}
-.footer {
-  &__logo {
-    text-decoration: none;
-  }
-  &__logo h1 {
-    @include main-headings;
-    font-weight: 500;
-    font-size: 1.25rem;
-    color: #FFFFFF;
-    margin-bottom: 1.25rem;
-  }
-  &__links_container {
-    @include flex-and-direction;
-  }
-  &__link_box {
-    display: block;
-    text-decoration: none;
-    color: #FFFFFF;
-    display: flex;
-    align-items: center;
-    margin-bottom: 0.625rem;
-  }
-  &__link_box .utensils {
-    font-size: 0.8rem;
-    margin-right: 0.85rem;
-    padding-bottom: 2px;
-  }
-  &__link_box .hands {
-    font-size: 0.7rem;
-    margin-right: 0.65rem;
-  }
-  &__txt {
-    font-size: 1rem;
-    font-weight: 400;
-  }
-}
 .cover {
   position: relative;
   width: 100%;
-  height: 270px;
+  height: 16.875rem;
   object-fit: cover;
 }
 .menu {
   position: relative;
   z-index: 100;
   background-color: $main-background-color;
-  border-radius: 40px 40px 0 0px;
+  border-radius: 2.5rem 2.5rem 0 0;
   bottom: 58px;
   padding-top: 1.875rem;
   &__header {
@@ -342,10 +233,10 @@ footer {
     @include main-headings;
     font-weight: 500;
     font-size: 1.8rem;
-    margin-left: 18px;
+    margin-left: 1.125rem;
   }
   &__heart {
-    width: 30px;
+    width: 1.875rem;
     cursor: pointer;
   }
   &__heart path {
@@ -360,18 +251,18 @@ footer {
   }
 }
 .courses {
-  padding-top: 35px;
+  padding-top: 2.188rem;
   @include flex-and-direction;
   &__heading {
     font-size: 1rem;
     font-weight: 400;
-    margin-left: 19px;
+    margin-left: 1.188rem;
   }
   &__heading_underline {
-    width: 40px;
-    height: 3px;
+    width: 2.5rem;
+    height: 0.188rem;
     background-color: $color-tertiary;
-    margin: 5px 0 0 18px;
+    margin: 0.313rem 0 0 1.125rem;
   }
   &__cards_container {
     @include flex-direction-centering;
@@ -383,10 +274,10 @@ footer {
     display: flex;
     justify-content: space-between;
     background-color: #FFFFFF;
-    border-radius: 15px;
+    border-radius: 0.938rem;
     height: 68px;
     width: 93.3%;
-    margin-bottom: 14px;
+    margin-bottom: 0.875rem;
     cursor: pointer;
     overflow: hidden;
     @include shadow;
