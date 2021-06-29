@@ -52,7 +52,7 @@
     opacity: 0;
   }
 }
-@keyframes heart-animationbis {
+@keyframes heart-animation {
   0% {
     stroke-dashoffset: 0;
   }
@@ -64,12 +64,12 @@
   80% {
     stroke: #9356DC;
     stroke-dashoffset: 0;
-    fill: url(#grad1);
+    fill: url(#gradient);
     opacity: 0.8;
   }
   100% {
     stroke: none;
-    fill: url(#grad1);
+    fill: url(#gradient);
     opacity: 1;
   }
 }
