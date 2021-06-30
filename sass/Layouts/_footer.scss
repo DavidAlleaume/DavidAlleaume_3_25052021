@@ -1,6 +1,9 @@
 footer {
     background-color: #3a3a3a;
     padding: 1.688rem 0 2.375rem 1.5rem;
+    @include desktop-only {
+      padding-bottom: 3.5rem;
+    }
   }
 .footer {
     &__logo {
@@ -18,8 +21,9 @@ footer {
       @include desktop-only {
         display: flex;
         flex-direction: row;
+        margin: auto;
         justify-content: space-between;
-        width: 95%;
+        width: 70%;
       }
     }
     &__link_box {

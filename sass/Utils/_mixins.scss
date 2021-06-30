@@ -17,6 +17,7 @@
 }
 @mixin main-btn-style {
     position: relative;
+    max-width: 20rem;
     z-index: 1;
     height: 3.125rem;
     border: none;
