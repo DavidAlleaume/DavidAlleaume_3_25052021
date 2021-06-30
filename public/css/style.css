@@ -283,7 +283,7 @@ body {
 .presentation__btn:hover::after {
   opacity: 1;
 }
-.presentation::after {
+.presentation__btn::after {
   content: "";
   position: absolute;
   top: 0;

@@ -65,9 +65,9 @@ body {
         opacity: 1;
       }
     }
-  }
-  &::after {
-     @include main-btn-after;
+    &::after {
+      @include main-btn-after;
+    }
   }
 }
 .process {
