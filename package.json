@@ -1,11 +1,11 @@
 {
   "name": "davidalleaume_3_25052021",
   "version": "1.0.0",
-  "description": "",
+  "description": "réalisation d'un site mobile pour la société ohmyfood",
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./sass/main.scss:./public/css/style.css",
-    "prefix": "postcss ./public/css/style.css --use autoprefixer -d./public/css/prefixed/"
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
   },
   "repository": {
     "type": "git",
