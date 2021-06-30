@@ -2,6 +2,7 @@
 @import "./Utils/variables";
 @import "./Utils/mixins";
 @import "./Utils/keyframes";
+@import "./Utils/maps";
 @import "./Pages/loading-spinner";
 @import "./Layouts/footer";
 @import "./Layouts/main_header";
@@ -58,7 +59,7 @@ body {
   }
   &__btn {
     width: 58.13%;
-    max-width: 28rem;
+    max-width: 20rem;
     @include main-btn-style;
     &:hover {
       &::after {
@@ -81,10 +82,14 @@ body {
   }
   &__cards_container {
     width: 90%;
-     height: 16.875rem;
+    height: 16.875rem;
     @include flex-and-direction;
     align-items: flex-end;
     justify-content: space-between;
+    @include desktop-only {
+      flex-direction: row;
+      height: 70px;
+    }
   }
   &__card {
     position: relative;
@@ -97,6 +102,9 @@ body {
     height: 4.375rem;
     background-color: $main-background-color;
     @include shadow;
+    @media screen and (min-width: 1024px) {
+      max-width: 30%;
+    }
   } 
   &__number {
     position: absolute;
@@ -136,10 +144,20 @@ body {
     width: 90%;
     margin: 3.125rem 0 1.5rem 0;
   }
-  &__cards_container {
+  &__cards_main_container {
     width: 90%;
     @include flex-direction-centering;
     justify-content: space-between;
+    @include desktop-only {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+  &__cards_container {
+    @media screen and (min-width: 1024px) {
+      display: flex;
+      justify-content: space-between;
+    }
   }
   &__card {
     display: block;
@@ -148,6 +166,9 @@ body {
     border-radius: 1.25rem;
     margin-bottom: 1.125rem;
     @include shadow;
+    @media screen and (min-width: 1024px) {
+      width: 49%;
+    }
   }
   &__img_box {
     position: relative;

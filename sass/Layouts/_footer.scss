@@ -15,6 +15,12 @@ footer {
     }
     &__links_container {
       @include flex-and-direction;
+      @include desktop-only {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 95%;
+      }
     }
     &__link_box {
       display: block;

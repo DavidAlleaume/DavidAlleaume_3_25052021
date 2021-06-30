@@ -44,3 +44,8 @@
 @mixin shadow($color: $shadow-color){
     box-shadow: 0px 5px 10px 0px $shadow-color;
 }
+@mixin desktop-only {
+    @media screen and (min-width: map-get($breakpoints, desktop)){
+        @content;
+    }
+}
