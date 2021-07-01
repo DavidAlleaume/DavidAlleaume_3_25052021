@@ -101,7 +101,7 @@ body {
     height: 4.375rem;
     background-color: $main-background-color;
     @include shadow;
-    @media screen and (min-width: 1024px) {
+    @include desktop-only {
       max-width: 30%;
     }
   } 
@@ -165,7 +165,7 @@ body {
     border-radius: 1.25rem;
     margin-bottom: 1.125rem;
     @include shadow;
-    @media screen and (min-width: 1024px) {
+    @include desktop-only {
       width: 49%;
     }
   }
