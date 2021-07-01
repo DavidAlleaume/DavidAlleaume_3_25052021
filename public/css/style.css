@@ -175,9 +175,10 @@ footer {
   .footer__links_container {
     display: flex;
     flex-direction: row;
-    margin: auto;
+    margin-left: 200px;
     justify-content: space-between;
     width: 70%;
+    max-width: 900px;
   }
 }
 .footer__link_box {

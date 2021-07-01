@@ -21,9 +21,10 @@ footer {
       @include desktop-only {
         display: flex;
         flex-direction: row;
-        margin: auto;
+        margin-left: 200px;
         justify-content: space-between;
         width: 70%;
+        max-width: 900px;
       }
     }
     &__link_box {
@@ -48,3 +49,4 @@ footer {
       font-weight: 400;
     }
   }
+  
