@@ -395,10 +395,12 @@ body {
 .restaurant__heading {
   font-weight: 900;
   width: 90%;
+  max-width: 1600px;
   margin: 3.125rem 0 1.5rem 0;
 }
 .restaurant__cards_main_container {
   width: 90%;
+  max-width: 1600px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -410,10 +412,16 @@ body {
     flex-wrap: wrap;
   }
 }
+.restaurant__cards_container {
+  width: 100%;
+}
 @media screen and (min-width: 1024px) {
   .restaurant__cards_container {
     display: flex;
     justify-content: space-between;
+    width: 49%;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 .restaurant__card {
@@ -427,7 +435,8 @@ body {
 }
 @media screen and (min-width: 1024px) {
   .restaurant__card {
-    width: 49%;
+    width: 100%;
+    min-width: 400px;
   }
 }
 .restaurant__img_box {
