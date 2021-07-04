@@ -107,7 +107,7 @@ body {
     }
     &:hover {
       @include shadow_hover;
-      background-color: $light-main-background-color;
+      background-color: lighten($color-primary,35%);
     }
   } 
   &__number {
