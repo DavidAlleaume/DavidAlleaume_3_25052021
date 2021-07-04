@@ -96,13 +96,18 @@ body {
     display: flex;
     align-items: center;
     border-radius: 1.25rem;
-    text-decoration: none;
     width: 96%;
     height: 4.375rem;
     background-color: $main-background-color;
     @include shadow;
+    cursor: pointer;
+    transition: all 0.5s;
     @include desktop-only {
       max-width: 30%;
+    }
+    &:hover {
+      @include shadow_hover;
+      background-color: $light-main-background-color;
     }
   } 
   &__number {
@@ -171,9 +176,13 @@ body {
     border-radius: 1.25rem;
     margin-bottom: 1.125rem;
     @include shadow;
+    transition: all 0.5s;
     @include desktop-only {
      width: 100%;
      min-width: 400px;
+    }
+    &:hover {
+      @include shadow_hover;
     }
   }
   &__img_box {
@@ -322,9 +331,11 @@ body {
     margin-bottom: 0.875rem;
     cursor: pointer;
     overflow: hidden;
+    transition: all 0.5s;
     animation: courses_cards_appearance 1s ease-in-out both;
     @include shadow;
     &:hover {
+      @include shadow_hover;
       .info {
         width: 57%;
       }

@@ -5,4 +5,5 @@ $light-color-secondary: lighten($color-secondary,5%);
 $color-tertiary: #99E2D0;
 $main-btn-color: linear-gradient(-5deg, $color-primary, $color-secondary);
 $main-background-color: #f3f3f3;
+$light-main-background-color: lighten($main-background-color,1%);
 $shadow-color: rgb(199, 199, 199);
