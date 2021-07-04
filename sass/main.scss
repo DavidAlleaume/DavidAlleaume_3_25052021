@@ -106,8 +106,8 @@ body {
       max-width: 30%;
     }
     &:hover {
-      @include shadow_hover;
-      background-color: $light-main-background-color;
+      @include shadow-hover;
+      background-color: lighten($color-primary,35%);
     }
   } 
   &__number {
@@ -182,7 +182,7 @@ body {
      min-width: 400px;
     }
     &:hover {
-      @include shadow_hover;
+      @include shadow-hover;
     }
   }
   &__img_box {
@@ -335,7 +335,7 @@ body {
     animation: courses_cards_appearance 1s ease-in-out both;
     @include shadow;
     &:hover {
-      @include shadow_hover;
+      @include shadow-hover;
       .info {
         width: 57%;
       }

@@ -359,7 +359,7 @@ body {
 }
 .process__card:hover {
   box-shadow: 0px 8px 20px 2px #c7c7c7;
-  background-color: #f6f6f6;
+  background-color: #f2eafb;
 }
 .process__number {
   position: absolute;
