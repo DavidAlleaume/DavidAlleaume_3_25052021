@@ -268,6 +268,7 @@ body {
   margin-bottom: 3.563rem;
 }
 .presentation__heading {
+  cursor: default;
   width: 65%;
   text-align: center;
   font-size: 1.5rem;
@@ -275,6 +276,7 @@ body {
   margin-top: 2.5rem;
 }
 .presentation__txt {
+  cursor: default;
   width: 83%;
   text-align: center;
   font-size: 1.1rem;
@@ -322,6 +324,7 @@ body {
   padding-bottom: 4.25rem;
 }
 .process__heading {
+  cursor: default;
   font-weight: 900;
   width: 90%;
   margin: 3.125rem 0 2.188rem 0;
@@ -399,6 +402,7 @@ body {
   padding-bottom: 3rem;
 }
 .restaurant__heading {
+  cursor: default;
   font-weight: 900;
   width: 90%;
   max-width: 100rem;
@@ -574,6 +578,7 @@ body {
   }
 }
 .courses__heading {
+  cursor: default;
   font-size: 1rem;
   font-weight: 400;
   margin-left: 1.188rem;
