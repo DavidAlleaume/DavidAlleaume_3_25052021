@@ -21,10 +21,10 @@ footer {
       @include desktop-only {
         display: flex;
         flex-direction: row;
-        margin-left: 200px;
+        margin: auto;
         justify-content: space-between;
         width: 70%;
-        max-width: 900px;
+        max-width: 56.25rem;
       }
     }
     &__link_box {
@@ -38,7 +38,7 @@ footer {
     &__link_box .utensils {
       font-size: 0.8rem;
       margin-right: 0.85rem;
-      padding-bottom: 2px;
+      padding-bottom: 0.125rem;
     }
     &__link_box .hands {
       font-size: 0.7rem;

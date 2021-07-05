@@ -76,11 +76,11 @@
 @keyframes courses_cards_appearance {
   0% {
     opacity: 0;
-    transform: translateY(15px);
+    transform: translateY(0.938rem);
   }
   100% {
     opacity: 1;
-    transform: translateY(0px);
+    transform: translateY(0rem);
   }
 }
  

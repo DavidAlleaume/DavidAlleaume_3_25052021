@@ -1,6 +1,7 @@
 .header {
   @include flex-direction-centering;
   padding: 1.25rem 0 0.5rem 0;
+  cursor: default;
   &__logo {
     @include main-headings;
     font-size: 1.8rem;
