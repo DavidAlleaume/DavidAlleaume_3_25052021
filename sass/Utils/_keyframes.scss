@@ -52,35 +52,31 @@
     opacity: 0;
   }
 }
-@keyframes heart-animation {
-  0% {
-    stroke-dashoffset: 0;
-  }
-  40% {
-    stroke-dashoffset: 1500;
-    fill: #ffb7eb;
-    opacity: 0.5;
-  }
-  80% {
-    stroke: #9356DC;
-    stroke-dashoffset: 0;
-    fill: url(#gradient);
-    opacity: 0.8;
-  }
-  100% {
-    stroke: none;
-    fill: url(#gradient);
-    opacity: 1;
-  }
-}
 @keyframes courses_cards_appearance {
   0% {
     opacity: 0;
-    transform: translateY(0.938rem);
+    transform: translateY(15px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0rem);
+    transform: translateY(0px);
+  }
+}
+@keyframes stroke_off {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  90% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
   }
 }
  
